@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Single Page Application</title>
+  <style>
+    /* Style for menu */
+    #menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    #menu li {
+      float: left;
+    }
+
+    #menu li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    #menu li a:hover {
+      background-color: #111;
+    }
+
+    /* Style for content */
+    #content {
+      padding: 16px;
+    }
+
+    /* Hide all content by default */
+    .category {
+      display: none;
+    }
+
+    /* Show the active category */
+    .active {
+      display: block;
+    }
+  </style>
+  <script>
+    // JavaScript to toggle the visibility of the categories
+    function toggleCategory(event) {
+      // Get all categories
+      let categories = document.querySelectorAll('.category');
+      // Hide all categories
+      categories.forEach(category => category.classList.remove('active'));
+      // Get the clicked category
+      let category = document.querySelector(event.target.getAttribute('href'));
+      // Show the clicked category
+      category.classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <ul id="menu">
+    <li><a href="#biography" onclick="toggleCategory(event)">Biography</a></li>
+    <li><a href="#photos" onclick="toggleCategory(event)">Photos</a></li>
+    <li><a href="#projects" onclick="toggleCategory(event)">Projects</a></li>
+    <li><a href="#links" onclick="toggleCategory(event)">Links</a></li>
+    <li><a href="#management" onclick="toggleCategory(event)">Management</a></li>
+  </ul>
+  <div id="content">
+    <div id="biography" class="category active">
+      <h2>Biography</h2>
+      <p>Adeline Virginia Woolf (25 January 1882 – 28 March 1941) was an English writer, considered one of the most important modernist 20th-century authors and a pioneer in the use of stream of consciousness as a narrative device.
+Woolf was born into an affluent household in South Kensington, London, the seventh child of Julia Prinsep Jackson and Leslie Stephen in a blended family of eight which included the modernist painter Vanessa Bell. She was home-schooled in English classics and Victorian literature from a young age. From 1897 to 1901, she attended the Ladies' Department of King's College London, where she studied classics and history and came into contact with early reformers of women's higher education and the women's rights movement.
+Encouraged by her father, Woolf began writing professionally in 1900. After her father's death in 1904, the Stephen family moved from Kensington to the more bohemian Bloomsbury, where, in conjunction with the brothers' intellectual friends, they formed the artistic and literary Bloomsbury Group. In 1912, she married Leonard Woolf, and in 1917, the couple founded the Hogarth Press, which published much of her work. They rented a home in Sussex and moved there permanently in 1940. Woolf had romantic relationships with women, including Vita Sackville-West, who also published her books through Hogarth Press. Both women's literature became inspired by their relationship, which lasted until Woolf's death.[3]
+During the inter-war period, Woolf was an important part of London's literary and artistic society. In 1915, she had published her first novel, The Voyage Out, through her half-brother's publishing house, Gerald Duckworth and Company. Her best-known works include the novels Mrs Dalloway (1925), To the Lighthouse (1927) and Orlando (1928). She is also known for her essays, including A Room of One's Own (1929). Woolf became one of the central subjects of the 1970s movement of feminist criticism and her works have since attracted much attention and widespread commentary for "inspiring feminism". Her works have been translated into more than 50 languages. A large body of literature is dedicated to her life and work, and she has been the subject of plays, novels and films. Woolf is commemorated today by statues, societies dedicated to her work and a building at the University of London.
+Throughout her life, Woolf was troubled by mental illness. She was institutionalised several times and attempted suicide at least twice. According to Dalsimer (2004), her illness was characterised by symptoms that would today be diagnosed as bipolar disorder, for which there was no effective treatment during her lifetime. In 1941, at age 59, Woolf died by drowning herself in the River Ouse at Lewes.</p>
+<b> VIRGINIA WOOLF'S SUICIDE NOTE<b>
+<p>Dearest,
+I feel certain I am going mad again. I feel we can't go through another of those terrible times. And I shan't recover this time. I begin to hear voices, and I can't concentrate. So I am doing what seems the best thing to do. You have given me the greatest possible happiness. You have been in every way all that anyone could be. I don't think two people could have been happier till this terrible disease came. I can't fight any longer. I know that I am spoiling your life, that without me you could work. And you will I know. You see I can't even write this properly. I can't read. What I want to say is I owe all the happiness of my life to you. You have been entirely patient with me and incredibly good. I want to say that - everybody knows it. If anybody could have saved me it would have been you. Everything has gone from me but the certainty of your goodness. I can't go on spoiling your life any longer.
+I don't think two people could have been happier than we have been.<p>    
+</div>
+    <div id="photos" class="category">
+      <h2>Photos</h2>
+      <p>♥</p>
+      <p><a href="https://en.wikipedia.org/wiki/Virginia_Woolf"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/George_Charles_Beresford_-_Virginia_Woolf_in_1902_-_Restoration.jpg/220px-George_Charles_Beresford_-_Virginia_Woolf_in_1902_-_Restoration.jpg" style="width:500px;height:500px;"></a></p>
+    <p><a href="https://en.wikipedia.org/wiki/Virginia_Woolf"><img src="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcSLHpOHyFpGKgTnKT69q_8lm9XKcvdUnAE628gLICAz8iKFBkZbXmMRhTa-pS5puMKoB8Imussboy33mqQ" style="width:500px;height:500px;"></a></p>
+    <p><a href="https://en.wikipedia.org/wiki/Virginia_Woolf"><img src="https://media.newyorker.com/photos/59097bfaebe912338a378790/master/w_2560%2Cc_limit/540306_r28900.jpg" style="width:500px;height:500px;"></a></p>  
+    <p><a href="https://en.wikipedia.org/wiki/Virginia_Woolf"><img src="https://www.bl.uk/britishlibrary/~/media/bl/global/dl%2020th%20century/authors/virginia-woolf-people-page.jpg" style="width:500px;height:500px;"></a></p>
+    <p><a href="https://en.wikipedia.org/wiki/Virginia_Woolf"><img src="https://s1.eestatic.com/2015/04/10/el-cultural/el_cultural_24757645_219219738_1024x576.jpg" style="width:800px;height:500px;"></a></p>
+    </div>
+    <div id="projects" class="category">
+    <b>BOOKS</b>
+
+    <p>Mrs Dalloway</p>
+    <p>To the Lighthouse</p>
+    <p>Orlando</p>
+    <p>A Room Of One's Own</p>
+    <p>The Waves</p>
+    <p>Jacob's Room</p>
+    <p>Between the Acts</p>
